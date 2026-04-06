@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: zone_revenue_by_pickup
+    description: "Promoted from ZeaOS session (table: zone_revenue)"
+    columns:
+      - name: PULocationID
+        description: ""
+        tests:
+          - not_null
+      - name: trips
+        description: ""
+        tests:
+          - not_null
+      - name: total_fare
+        description: ""
+        tests:
+          - not_null
+      - name: avg_tip
+        description: ""
+        tests:
+          - not_null
+

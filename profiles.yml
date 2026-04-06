@@ -1,0 +1,7 @@
+zea_local:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: 'local.duckdb'
+      threads: 4

@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: avg_tip_by_payment
+    description: "Promoted from ZeaOS session (table: avg_tip)"
+    columns:
+      - name: payment_type
+        description: ""
+        tests:
+          - not_null
+      - name: avg_tip
+        description: ""
+        tests:
+          - not_null
+      - name: trips
+        description: ""
+        tests:
+          - not_null
+
