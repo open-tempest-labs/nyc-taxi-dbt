@@ -1,23 +1,6 @@
 {
   "artifacts": [
     {
-      "name": "avg_tip_by_payment",
-      "kind": "model",
-      "source_uris": [
-        "https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-01.parquet"
-      ],
-      "transformations": [
-        {
-          "expr": "SELECT payment_type, ROUND(AVG(tip_amount), 2) AS avg_tip, COUNT(*) AS trips FROM trips GROUP BY payment_type ORDER BY avg_tip DESC",
-          "type": "sql"
-        }
-      ],
-      "columns": 3,
-      "row_count": 5,
-      "dialect": "duckdb",
-      "portable": true
-    },
-    {
       "name": "zone_revenue_by_pickup",
       "kind": "model",
       "source_uris": [
@@ -33,10 +16,27 @@
       "row_count": 254,
       "dialect": "duckdb",
       "portable": true
+    },
+    {
+      "name": "avg_tip_by_payment",
+      "kind": "model",
+      "source_uris": [
+        "https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-01.parquet"
+      ],
+      "transformations": [
+        {
+          "expr": "SELECT payment_type, ROUND(AVG(tip_amount), 2) AS avg_tip, COUNT(*) AS trips FROM trips GROUP BY payment_type ORDER BY avg_tip DESC",
+          "type": "sql"
+        }
+      ],
+      "columns": 3,
+      "row_count": 5,
+      "dialect": "duckdb",
+      "portable": true
     }
   ],
-  "exported": "2026-04-06T19:58:03Z",
-  "session_id": "zea-2026-04-06-1558",
+  "exported": "2026-04-07T00:30:03Z",
+  "session_id": "zea-2026-04-06-2030",
   "user": "lmccay",
   "version": "0.2.0"
 }
